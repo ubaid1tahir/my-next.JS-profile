@@ -1,4 +1,4 @@
-import Contact from "./contact";
+import Contact from "./Contact";
 
 export function postData(data) {
     const url = 'http://localhost:3000/api/contact';
