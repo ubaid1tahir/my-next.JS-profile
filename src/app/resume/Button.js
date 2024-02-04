@@ -82,7 +82,7 @@ function ResumeContent() {
                                                     <div class="small text-muted">Lahore, Johar Town</div>
                                                 </div>
                                                 <div class="fst-italic">
-                                                    <div class="small text-muted">Master's</div>
+                                                    <div class="small text-muted">Master&apos;s</div>
                                                     <div class="small text-muted">Web Development</div>
                                                 </div>
                                             </div>

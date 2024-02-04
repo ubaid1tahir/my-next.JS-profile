@@ -1,10 +1,10 @@
 import Contact from "./Contact";
 
-export function postData(data) {
+export async function postData(data) {
     const url = 'http://localhost:3000/api/contact';
 
     try {
-        const response = fetch(url, {
+        const response = await fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -16,7 +16,7 @@ export function postData(data) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
-        const responseData = response.text();
+        const responseData = await response.text();
         console.log('Response from server:', responseData);
     } catch (error) {
         console.error('Error sending data:', error);
