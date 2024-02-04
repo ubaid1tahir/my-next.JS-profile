@@ -3,7 +3,7 @@
 import React, {useState} from 'react'
 import { postData } from './page';
 
-function contact() {
+function Contact() {
     const [message, setMessage] = useState({
         fullName: '',
         email: '',
@@ -90,4 +90,4 @@ function contact() {
     )
 }
 
-export default contact
+export default Contact
