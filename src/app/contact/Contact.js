@@ -1,9 +1,9 @@
 "use client";
 
 import React, {useState} from 'react'
-import { postData } from './Page';
+import { usePostData } from './page';
 
-function useContact() {
+function Contact() {
     const [message, setMessage] = useState({
         fullName: '',
         email: '',
@@ -16,7 +16,7 @@ function useContact() {
 
         console.log(message);
 
-        postData(message);
+        usePostData(message);
 
         setMessage({
             fullName: '',
@@ -90,4 +90,4 @@ function useContact() {
     )
 }
 
-export default useContact
+export default Contact

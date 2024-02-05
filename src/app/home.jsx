@@ -3,7 +3,7 @@ import Header from '@/components/Header'
 import About from '@/components/About'
 import Resume from '@/app/resume/page'
 import Projects from '@/app/projects/page'
-import Contact from '@/app/contact/Page'
+import Contact from '@/app/contact/page'
 
 
 async function connectDB() {
