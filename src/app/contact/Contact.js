@@ -1,10 +1,10 @@
 "use client";
 
-import React, {useState} from 'react'
+import React from 'react'
 import { usePostData } from './page';
 
-function Contact() {
-    const [message, setMessage] = useState({
+const Contact = () => {
+    const [message, setMessage] = React.useState({
         fullName: '',
         email: '',
         phoneNumber: '',
