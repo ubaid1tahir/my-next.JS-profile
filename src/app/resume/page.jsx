@@ -1,4 +1,4 @@
-import ResumeContent from "./Button"
+import ResumeContent from "../../../ResumeContent"
 
 function Resume() {
     return (

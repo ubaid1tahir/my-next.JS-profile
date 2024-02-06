@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react'
-import { usePostData } from './page';
+import { usePostData } from './src/app/contact/page';
 
 const Contact = () => {
     const [message, setMessage] = React.useState({
@@ -11,7 +11,7 @@ const Contact = () => {
         content: ''
     })
 
-    const handleSubmit = (e) => {
+    const HandleSubmit = (e) => {
         e.preventDefault();
 
         console.log(message);
@@ -40,30 +40,30 @@ const Contact = () => {
                         <div className="row gx-5 justify-content-center">
                             <div className="col-lg-8 col-xl-6">
                                 
-                                <form id="contactForm" onSubmit={handleSubmit} data-sb-form-api-token="API_TOKEN">
+                                <form id="contactForm" onSubmit={HandleSubmit} data-sb-form-api-token="API_TOKEN">
                                     
                                     <div className="form-floating mb-3">
                                         <input className="form-control" id="name" type="text" value={message.fullName} onChange={(e) => setMessage({...message, fullName: e.target.value})} placeholder="Enter your name..." data-sb-validations="required" />
-                                        <label for="name">Full name</label>
+                                        <label htmlFor="name">Full name</label>
                                         <div className="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                                     </div>
                                     
                                     <div className="form-floating mb-3">
                                         <input className="form-control" id="email" type="email"  value={message.email} onChange={(e) => setMessage({...message, email: e.target.value})} placeholder="name@example.com" data-sb-validations="required,email" />
-                                        <label for="email">Email address</label>
+                                        <label htmlFor="email">Email address</label>
                                         <div className="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                         <div className="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                                     </div>
                                     
                                     <div className="form-floating mb-3">
                                         <input className="form-control" id="phone"  value={message.phoneNumber} onChange={(e) => setMessage({...message, phoneNumber: e.target.value})} type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                        <label for="phone">Phone number</label>
+                                        <label htmlFor="phone">Phone number</label>
                                         <div className="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                                     </div>
                                     
                                     <div className="form-floating mb-3">
                                         <textarea className="form-control" id="message" type="text"  value={message.content} onChange={(e) => setMessage({...message, content: e.target.value})} placeholder="Enter your message here..." data-sb-validations="required"></textarea>
-                                        <label for="message">Message</label>
+                                        <label htmlFor="message">Message</label>
                                         <div className="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                                     </div>
                                     

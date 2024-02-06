@@ -1,4 +1,6 @@
-import { Home } from "./home"
+import Home from "../../home"
+
+
 
 function home() {
     return (

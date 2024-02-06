@@ -1,4 +1,4 @@
-import Contact from "./Contact";
+import Contact from "../../../Contact";
 
 export async function usePostData(data) {
     const url = 'http://localhost:3000/api/contact';

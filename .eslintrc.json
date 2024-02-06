@@ -1,11 +1,17 @@
-{"plugins": [
-  "react-hooks"
-],
-"rules": {
-  "react-hooks/rules-of-hooks": "error",
-  "react-hooks/exhaustive-deps": "warn"
-},
-"parserOptions": {
-  "ecmaVersion": 2017, // or "es6"
-  "sourceType": "module"
-}}
+{
+  "plugins": [
+    "react-hooks"
+  ],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020, // or "es6"
+    "sourceType": "module"
+  },
+  "extends": [
+    "eslint:recommended",
+    "next"
+  ]
+}

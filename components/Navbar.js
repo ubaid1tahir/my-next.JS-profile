@@ -1,18 +1,18 @@
 "use client";
 
-
 import React, { useState, useEffect} from 'react'
 import Link from 'next/link'
 
 
 function Navbar({
-    name,
-    ...props
+    name
 }) {
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    let initialState = window.innerWidth
+    const [windowWidth, setWindowWidth] = useState(initialState);
     const [isClick, setIsClick] = useState(true);
 
     const handleResize = () => {
+        console.log(windowWidth);
         setWindowWidth(window.innerWidth);
     };
 
