@@ -14,7 +14,6 @@ const Contact = () => {
     const HandleSubmit = (e) => {
         e.preventDefault();
 
-        console.log(message);
 
         usePostData(message);
 

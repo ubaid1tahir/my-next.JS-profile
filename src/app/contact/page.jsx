@@ -1,7 +1,7 @@
 import Contact from "../../../Contact";
 
 export async function usePostData(data) {
-    const url = 'http://localhost:3000/api/contact';
+    const url = '/api/contact';
 
     try {
         const response = await fetch(url, {
@@ -17,9 +17,8 @@ export async function usePostData(data) {
         }
 
         const responseData = await response.text();
-        console.log('Response from server:', responseData);
     } catch (error) {
-        console.error('Error sending data:', error);
+        console.error(error);
     }
 }
 
