@@ -7,8 +7,7 @@ import Link from 'next/link'
 function Navbar({
     name
 }) {
-    let initialState = window.innerWidth
-    const [windowWidth, setWindowWidth] = useState(initialState);
+    const [windowWidth, setWindowWidth] = useState(undefined);
     const [isClick, setIsClick] = useState(true);
 
     const handleResize = () => {
@@ -17,11 +16,11 @@ function Navbar({
     };
 
     useEffect(() => {
-        window.addEventListener('resize', handleResize);
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-        }, [windowWidth]);
+        if(typeof window  !== 'undefined') {
+            window.addEventListener('resize', handleResize);
+            return () => {
+                window.removeEventListener('resize', handleResize);
+            }}}, [windowWidth]);
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-white py-3">
