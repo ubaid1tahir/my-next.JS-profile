@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react'
-import { usePostData } from './src/app/contact/page';
+import { usePostData } from '../src/app/contact/page';
 
 const Contact = () => {
     const [message, setMessage] = React.useState({
@@ -14,7 +14,7 @@ const Contact = () => {
     const HandleSubmit = (e) => {
         e.preventDefault();
 
-
+        console.log(message);
         usePostData(message);
 
         setMessage({

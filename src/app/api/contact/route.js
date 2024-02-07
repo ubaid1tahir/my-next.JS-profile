@@ -15,10 +15,13 @@ export async function GET() {
 export async function POST(req) {
     try {
         const data = await req.json();
+        console.log(data);
         if(!data){
             return new Response('Error in posting the data')
         }
         const message = await Message.create(data);
+        console.log(message);
+
         if(!message){
             return new Response('Something went wrong while posting the message')
         }

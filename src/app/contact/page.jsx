@@ -1,8 +1,8 @@
-import Contact from "../../../Contact";
+import Contact from "../../../components/Contact";
 
 export async function usePostData(data) {
     const url = '/api/contact';
-
+    console.log(data);
     try {
         const response = await fetch(url, {
             method: 'POST',
@@ -16,7 +16,8 @@ export async function usePostData(data) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
-        await response.json();
+        const responseData = await response.json();
+        console.log(responseData);
     } catch (error) {
         console.error(error);
     }
