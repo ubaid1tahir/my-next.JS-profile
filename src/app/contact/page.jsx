@@ -16,7 +16,7 @@ export async function usePostData(data) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
-        const responseData = await response.json();
+        const responseData = await response.text();
         console.log(responseData);
     } catch (error) {
         console.error(error);

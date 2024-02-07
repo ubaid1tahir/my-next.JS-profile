@@ -25,12 +25,11 @@ export async function POST(req) {
             phoneNumber: data.phoneNumber,
             content: data.content
         });
-        console.log(message._id);
 
         if(!message){
             return new Response('Something went wrong while posting the message')
         }
-        return new Response({"message":"Successfully POSTED the message"})
+        return new Response("Successfully POSTED the message")
     } catch (error) {
         console.error("Something went wrong in POST");
     }

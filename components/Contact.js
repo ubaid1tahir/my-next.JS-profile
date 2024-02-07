@@ -14,8 +14,7 @@ const Contact = () => {
     const HandleSubmit = (e) => {
         e.preventDefault();
 
-        console.log(message);
-        usePostData(message);
+        usePostData(message)
 
         setMessage({
             fullName: '',
@@ -76,7 +75,6 @@ const Contact = () => {
                                     </div>
                                     
                                     <div className="d-none" id="submitErrorMessage"><div className="text-center text-danger mb-3">Error sending message!</div></div>
-                                    
                                     <div className="d-grid"><button className="btn btn-primary btn-lg hover:cursor-pointer" id="submitButton" type="submit">Submit</button></div>
                                 </form>
                             </div>
