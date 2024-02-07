@@ -16,13 +16,14 @@ export async function usePostData(data) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
-        await response.text();
+        await response.json();
     } catch (error) {
         console.error(error);
     }
 }
 
 function Page(){
+
     return (
         <Contact />
     )

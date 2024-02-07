@@ -18,11 +18,11 @@ export async function POST(req) {
         if(!data){
             return new Response('Error in posting the data')
         }
-        const message = Message.create(data);
+        const message = await Message.create(data);
         if(!message){
             return new Response('Something went wrong while posting the message')
         }
-        return new Response('Successfully POSTED the message')
+        return new Response({"message":"Successfully POSTED the message"})
     } catch (error) {
         console.error("Something went wrong in POST");
     }
