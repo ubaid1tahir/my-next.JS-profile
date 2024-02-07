@@ -19,8 +19,13 @@ export async function POST(req) {
         if(!data){
             return new Response('Error in posting the data')
         }
-        const message = await Message.create(data);
-        console.log(message);
+        const message = await Message.create({
+            fullName: data.fullName,
+            email: data.email,
+            phoneNumber: data.phoneNumber,
+            content: data.content
+        });
+        console.log(message._id);
 
         if(!message){
             return new Response('Something went wrong while posting the message')
@@ -29,5 +34,4 @@ export async function POST(req) {
     } catch (error) {
         console.error("Something went wrong in POST");
     }
-
 }
