@@ -32,8 +32,10 @@ function ResumeContent() {
                                 <h2 className="text-primary fw-bolder mb-0">Experience</h2>
                                 
                                 <a className="btn btn-primary px-4 py-3" onClick={captureScreenshot} href="#!">
-                                    <div className="d-inline-block bi bi-download me-2"></div>
-                                    Download Resume
+                                    <div className="d-inline-block bi bi-download">
+                                    <span className='block md:hidden'>Download</span>
+                                    <span className='hidden md:block'>Download Resume</span>
+                                    </div>
                                 </a>
                             </div>
                             

@@ -1,4 +1,4 @@
-import ResumeContent from "../../../ResumeContent"
+import ResumeContent from "../../../components/ResumeContent"
 
 function Resume() {
     return (
