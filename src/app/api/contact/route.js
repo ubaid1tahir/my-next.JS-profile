@@ -1,6 +1,7 @@
 import dbConnect from "@/db/dbConnect";
 import dotenv from 'dotenv';
 import { Message } from "@/models/user.model";
+import { NextResponse } from "next/server";
 
 
 export async function GET() {
@@ -17,9 +18,9 @@ export async function POST(req) {
         const data = await req.json();
         console.log(data);
         if(!data){
-            return new Response('Error in posting the data')
+            return new NextResponse({"msg" : "All Fields are required"}, {status: 404})
         }
-        const message = await Message.create({
+        const message = await new Message({
             fullName: data.fullName,
             email: data.email,
             phoneNumber: data.phoneNumber,
@@ -27,9 +28,10 @@ export async function POST(req) {
         });
 
         if(!message){
-            return new Response('Something went wrong while posting the message')
+            return new NextResponse({"msg" : "Something is wrong while posting the message"}, {status: 404})
         }
-        return new Response("Successfully POSTED the message")
+        await message.save()
+        return new NextResponse({"msg" : "Successfully POSTED the message"}, {status: 200})
     } catch (error) {
         console.error("Something went wrong in POST");
     }
