@@ -2,7 +2,6 @@ import Contact from "../../../components/Contact";
 
 export async function usePostData(data) {
     const url = `${process.env.NEXT_PUBLIC_SITE_URL}/api/contact`;
-    console.log(data);
     try {
         const response = await fetch(url, {
             method: 'POST',
