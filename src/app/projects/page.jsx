@@ -17,7 +17,7 @@ function projects() {
                                     <div className="flex xs:flex-col lg:flex-row align-items-center">
                                         <div className="p-5">
                                             <h2 className="fw-bolder">VibrantEdge</h2>
-                                            <p>VibrantEdge: A Next.js-powered showcase of a digital marketing agency. Leveraging Tailwind CSS and Bootstrap, we highlight our service offerings and past projects. Join us to harness the power of digital marketing and elevate your brand's online presence.</p>
+                                            <p>VibrantEdge: A Next.js-powered showcase of a digital marketing agency. Leveraging Tailwind CSS and Bootstrap, we highlight our service offerings and past projects. Join us to harness the power of digital marketing and elevate your brand&apos;s online presence.</p>
                                         </div>
                                         <Image className="img-fluid" width={400} height={500} src={projectPic} alt="..." />
                                     </div>
