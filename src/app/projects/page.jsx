@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import projectPic from "@/../public/Vibrant.png"
 
 function projects() {
     return (
@@ -16,21 +16,10 @@ function projects() {
                                 <div className="card-body p-0">
                                     <div className="flex xs:flex-col lg:flex-row align-items-center">
                                         <div className="p-5">
-                                            <h2 className="fw-bolder">Project Name 1</h2>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius at enim eum illum aperiam placeat esse? Mollitia omnis minima saepe recusandae libero, iste ad asperiores! Explicabo commodi quo itaque! Ipsam!</p>
+                                            <h2 className="fw-bolder">VibrantEdge</h2>
+                                            <p>VibrantEdge: A Next.js-powered showcase of a digital marketing agency. Leveraging Tailwind CSS and Bootstrap, we highlight our service offerings and past projects. Join us to harness the power of digital marketing and elevate your brand's online presence.</p>
                                         </div>
-                                        <Image className="img-fluid" width={400} height={500} src="https://dummyimage.com/300x400/343a40/6c757d" alt="..." />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="card overflow-hidden shadow rounded-4 border-0">
-                                <div className="card-body p-0">
-                                    <div className="d-flex align-items-center">
-                                        <div className="p-5">
-                                            <h2 className="fw-bolder">Project Name 2</h2>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius at enim eum illum aperiam placeat esse? Mollitia omnis minima saepe recusandae libero, iste ad asperiores! Explicabo commodi quo itaque! Ipsam!</p>
-                                        </div>
-                                        <Image className="img-fluid" width={400} height={500} src="https://dummyimage.com/300x400/343a40/6c757d" alt="..." />
+                                        <Image className="img-fluid" width={400} height={500} src={projectPic} alt="..." />
                                     </div>
                                 </div>
                             </div>
